@@ -1,33 +1,33 @@
 @echo off
 SETLOCAL ENABLEEXTENSIONS
 
-:: è®¾ç½®ä½ çš„ Gitee ä»“åº“çš„ SSH åœ°å€
+:: ÉèÖÃÄãµÄ Gitee ²Ö¿âµÄ SSH µØÖ·
 set REPO_URL=git@gitee.com:cdd_123/soft-exam-knowledge-points.git
 
-:: è®¾ç½®æœ¬åœ°æ–‡ä»¶å¤¹è·¯å¾„
-set LOCAL_FOLDER=D:\è‡ªå·±æŠ€æœ¯æ€»ç»“\è½¯è€ƒ\è½¯ä»¶è®¾è®¡å¸ˆ\è½¯è€ƒçŸ¥è¯†ç‚¹
+:: ÉèÖÃ±¾µØÎÄ¼þ¼ÐÂ·¾¶
+set LOCAL_FOLDER=D:\×Ô¼º¼¼Êõ×Ü½á\Èí¿¼\Èí¼þÉè¼ÆÊ¦\Èí¿¼ÖªÊ¶µã
 
-:: è¿›å…¥æ–‡ä»¶å¤¹
+:: ½øÈëÎÄ¼þ¼Ð
 cd /d "%LOCAL_FOLDER%"
 
-:: å¦‚æžœæ˜¯ç¬¬ä¸€æ¬¡ä¸Šä¼ ï¼Œåˆå§‹åŒ– git ä»“åº“
+:: Èç¹ûÊÇµÚÒ»´ÎÉÏ´«£¬³õÊ¼»¯ git ²Ö¿â
 if not exist ".git" (
-    echo "åˆå§‹åŒ– Git ä»“åº“..."
+    echo "³õÊ¼»¯ Git ²Ö¿â..."
     git init
     git remote add origin %REPO_URL%
 )
 
-:: æ·»åŠ æ–‡ä»¶åˆ°æš‚å­˜åŒº
-echo "æ·»åŠ æ–‡ä»¶åˆ° Git ä»“åº“..."
+:: Ìí¼ÓÎÄ¼þµ½ÔÝ´æÇø
+echo "Ìí¼ÓÎÄ¼þµ½ Git ²Ö¿â..."
 git add .
 
-:: æäº¤æ›´æ”¹
-echo "æäº¤æ›´æ”¹..."
-git commit -m "ä¸Šä¼ æ›´æ–°çš„è½¯è€ƒçŸ¥è¯†ç‚¹"
+:: Ìá½»¸ü¸Ä
+echo "Ìá½»¸ü¸Ä..."
+git commit -m "ÉÏ´«¸üÐÂµÄÈí¿¼ÖªÊ¶µã"
 
-:: å°†æ›´æ”¹æŽ¨é€åˆ° Gitee
-echo "æŽ¨é€æ›´æ”¹åˆ° Gitee..."
+:: ½«¸ü¸ÄÍÆËÍµ½ Gitee
+echo "ÍÆËÍ¸ü¸Äµ½ Gitee..."
 git push -u origin master
 
-echo "ä¸Šä¼ å®Œæˆ!"
+echo "ÉÏ´«Íê³É!"
 pause
