@@ -34,6 +34,9 @@ git add .
 echo "提交更改..."
 git commit -m "自动上传更新时间：%TIMESTAMP%"
 
+
+git pull
+echo "拉取代码"
 :: 将更改推送到 Gitee
 echo "推送更改到 Gitee..."
 git push -u origin master
